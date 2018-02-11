@@ -1,2 +1,4 @@
 dndcc/
 *.pyc
+.idea
+db.sqlite3
