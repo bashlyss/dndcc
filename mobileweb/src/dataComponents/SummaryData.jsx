@@ -22,7 +22,7 @@ class SummaryData extends React.Component {
   };
 
   render() {
-    return <Summary {...data} />;
+    return <Summary {...this.data} />;
   }
 }
 

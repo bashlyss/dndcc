@@ -15,7 +15,7 @@ class ValueCell extends React.PureComponent {
 ValueCell.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   label: PropTypes.string.isRequired,
-  value: PropTypes.number.isRequired,
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
 };
 
 ValueCell.defaultProps = {

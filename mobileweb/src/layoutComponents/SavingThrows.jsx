@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import buttonify from '../components/Button/buttonify';
 import ValueCell from '../components/ValueCell';
-import List from '../components/Button/IconButtonList'; // TODO refactor this components to just be called list
+import List from '../components/List/List';
 
 class SavingThrows extends React.Component {
   navigateToStrength = () => routes.navigateToAbilities('strength');
@@ -34,3 +34,5 @@ SavingThrows.propTypes = {
   strength: PropTypes.number.isRequired,
   wisdom: PropTypes.number.isRequired,
 };
+
+export default SavingThrows;
