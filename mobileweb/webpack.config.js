@@ -22,10 +22,9 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          {
-            // TODO Add support for MiniCssExtractPlugin
-            loader: 'css-loader'
-          }
+          // TODO Add support for MiniCssExtractPlugin
+          'style-loader',
+          'css-loader'
         ]
       }
     ]
