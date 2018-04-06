@@ -37,6 +37,12 @@ body { margin: 0; }
 .row {
   margin: 8px 0;
 }
+.row--centered {
+  align-items: center;
+}
+.wrap {
+  flex-wrap: wrap;
+}
 
 /* ValueCell */
 .value {
@@ -81,22 +87,23 @@ body { margin: 0; }
 .svg64 { width: 64px; height: 64px; }
 
 /* Component styles */
-/* Main page styles */
-.summary--main {
-  align-items: center;
-  flex-direction: column;
-  flex-grow: 1;
-}
-.summary--main > .row .value {
-  margin: 0 8px;
-}
-
-.summary-view > .list {
-  padding: 8px;
-}
 
 /* Main Menu styles */
 .main > .list .icon-button {
   border-radius: 0;
   flex-grow: 1;
+}
+
+/* Main page styles */
+.summary--main, .combat--main {
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.summary--main > .row .value, .combat--main > .row .value {
+  margin: 0 8px;
+}
+
+.summary-view > .list {
+  padding: 8px;
 }

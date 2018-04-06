@@ -2,8 +2,8 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 import styles from './index.css';
-import SummaryData from './dataComponents/SummaryData';
+import Router from './utils/Router';
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<SummaryData />, document.getElementById('app'));
+  ReactDOM.render(<Router />, document.getElementById('app'));
 });

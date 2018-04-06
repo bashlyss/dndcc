@@ -5,17 +5,17 @@ import ValueCell from '../components/ValueCell';
 import Button from '../components/Button/Button';
 import routes from '../utils/routes';
 
-import Menu from './Menu';
+import Root from './Root';
 import SavingThrows from './SavingThrows';
 
 class Summary extends React.PureComponent {
   render() {
     return (
-      <div className="main">
+      <Root activeTab="summary">
         <div className="summary-view">
           <div className="summary--main">
             <div className="row">
-              <ValueCell label="HP" value={this.props.hp} size="large" />
+              <ValueCell label="Max HP" value={this.props.hp} size="large" />
             </div>
             <div className="row">
               <ValueCell label="AC" value={this.props.ac} />
@@ -23,7 +23,7 @@ class Summary extends React.PureComponent {
             </div>
             <div className="row">
               <ValueCell label="Passive Perception" value={this.props.passivePerception} />
-              <ValueCell label="Iniative" value={this.props.initiative} />
+              <ValueCell label="Initiative" value={this.props.initiative} />
             </div>
             <div className="row">
               <ValueCell label="Hit Die" value={this.props.availableHitDice} />
@@ -33,8 +33,7 @@ class Summary extends React.PureComponent {
           </div>
           <SavingThrows {...this.props.savingThrows} />
         </div>
-        <Menu activeTab="summary" />
-      </div>
+      </Root>
     );
   }
 }
