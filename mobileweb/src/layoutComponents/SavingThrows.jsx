@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import routes from '../utils/routes';
 import buttonify from '../components/Button/buttonify';
 import ValueCell from '../components/ValueCell';
 import List from '../components/List/List';
@@ -8,14 +9,14 @@ import List from '../components/List/List';
 class SavingThrows extends React.Component {
   navigateToStrength = () => routes.navigateToAbilities('strength');
   navigateToDexterity = () => routes.navigateToAbilities('dexterity');
-  navigatetoIntelligence = () => routes.navigateToAbilities('intelligence');
+  navigateToIntelligence = () => routes.navigateToAbilities('intelligence');
   navigateToWisdom = () => routes.navigateToAbilities('wisdom');
   navigateToCharisma = () => routes.navigateToAbilities('charisma');
   render() {
     const ButtonValueCell = buttonify(ValueCell);
     return (
       <List direction="vertical">
-        <ButtonValueCell label="STR" value={this.props.strength} onClick={this.navigatetoStrength} />
+        <ButtonValueCell label="STR" value={this.props.strength} onClick={this.navigateToStrength} />
         <ButtonValueCell label="DEX" value={this.props.dexterity} onClick={this.navigateToDexterity} />
         <ValueCell label="CON" value={this.props.constitution} />
         <ButtonValueCell label="INT" value={this.props.intelligence} onClick={this.navigateToIntelligence} />

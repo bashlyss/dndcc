@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class IconButton extends React.PureComponent {
   render() {
     return (
-      <button className="icon-button" onClick={this.props.onClick}>
+      <button className="button icon-button" onClick={this.props.onClick}>
         {this.props.children}
       </button>
     );

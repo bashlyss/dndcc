@@ -1,3 +1,102 @@
+/* Global style sheet */
+
+/* Global variables */
+@value font-large: 24px;
+@value font-medium: 20px;
+@value font-small: 16px;
+@value font-extra-small: 12px;
+
+@value darkenBackground: rgba(0, 0, 0, 0.05);
+
+/* Global styles */
 div {
-    display: flex;
+  display: flex;
+}
+body { margin: 0; }
+:focus { outline: none; }
+.main {
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+.main > :not(:last-child) {
+  flex-grow: 1;
+}
+
+/* Styleguide styles */
+/* List / Layout */
+.list {
+  justify-content: space-evenly;
+}
+.list--vertical {
+  flex-direction: column;
+}
+.row, .list--horizontal {
+  flex-direction: row;
+}
+.row {
+  margin: 8px 0;
+}
+
+/* ValueCell */
+.value {
+  align-items: center;
+  background: darkenBackground;
+  border: 1px solid darkenBackground;
+  border-radius: 4px;
+  flex-direction: column;
+  padding: 4px 8px;
+}
+.value--large .value__value { font-size: font-large; }
+.value--large .value__label { font-size: font-medium; }
+.value--medium .value__value { font-size: font-medium; }
+.value--medium .value__label { font-size: font-small; }
+.value--small .value__value { font-size: font-small; }
+.value--small .value__label { font-size: font-extra-small; }
+
+/* Buttons */
+.buttonify, .icon-button, .button {
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: inherit;
+  padding: 0;
+}
+.button {
+  padding: 7px 11px;
+  background: darkenBackground;
+  border: 1px solid black;
+}
+.icon-button {
+  padding: 7px;
+}
+.button:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.button:active {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* SVGs */
+.svg64 { width: 64px; height: 64px; }
+
+/* Component styles */
+/* Main page styles */
+.summary--main {
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.summary--main > .row .value {
+  margin: 0 8px;
+}
+
+.summary-view > .list {
+  padding: 8px;
+}
+
+/* Main Menu styles */
+.main > .list .icon-button {
+  border-radius: 0;
+  flex-grow: 1;
 }

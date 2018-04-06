@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class ValueCell extends React.PureComponent {
   render() {
     return (
-      <div className={`value--${this.props.size}`}>
+      <div className={`value value--${this.props.size}`}>
         <span className="value__label">{this.props.label}</span>
         <div className="value__value">{this.props.value}</div>
       </div>

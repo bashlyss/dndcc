@@ -11,10 +11,11 @@ const routes = {
   settings: '/settings/',
   inventory: '/inventory/',
   playerDetails: '/player-info/',
+  abilities: '/abilities/',
 };
 
 function navigate(route, ...args) {
-  window.history.pushState({ page: _.findKey(routes, route), args, }, '', route);
+  window.history.pushState({ page: _.findKey(routes, path => path === route), args, }, '', route);
 }
 
 const navFunctions = {}

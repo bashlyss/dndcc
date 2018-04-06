@@ -5,7 +5,7 @@ function buttonify(Component) {
   class ButtonifyHOC extends React.PureComponent {
     render() {
       return (
-        <button onClick={this.props.onClick}>
+        <button className="buttonify" onClick={this.props.onClick}>
           <Component {..._.omit(this.props, ['onClick'])} />
         </button>
       );
