@@ -2,8 +2,8 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 
 import styles from './index.css';
-import Router from './utils/Router';
+import Root from './layoutComponents/Root';
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<Router />, document.getElementById('app'));
+  ReactDOM.render(<Root />, document.getElementById('app'));
 });
