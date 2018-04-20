@@ -40,6 +40,9 @@ body { margin: 0; }
 .row--centered {
   align-items: center;
 }
+.button-row > :not(:last-child) {
+  margin-right: 8px;
+}
 .wrap {
   flex-wrap: wrap;
 }

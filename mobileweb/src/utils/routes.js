@@ -1,4 +1,6 @@
 import _ from 'lodash';
+import { UPDATE_CURRENT_ROUTE } from '../state/clientMutations/updateCurrentRoute';
+import client from '../state/ApolloClient';
 
 const routes = {
   summary: '/summary/',
@@ -26,13 +28,19 @@ const routeComponents = {
 };
 
 function navigate(route, ...args) {
-  window.history.pushState({ page: _.findKey(routes, path => path === route), args, }, '', route);
+  client.mutate({
+    mutation: UPDATE_CURRENT_ROUTE,
+    variables: {
+      newRoute: route,
+      args,
+    },
+  });
 }
 
 const navFunctions = {}
 _.forEach(routes, (route, key) => {
   const fnName = _.camelCase(`navigate to ${key}`);
-  navFunctions[fnName] = _.partial(navigate, route);
+  navFunctions[fnName] = _.partial(navigate, key);
 });
 
 export { routes, routeComponents };

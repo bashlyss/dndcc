@@ -5,35 +5,34 @@ import ValueCell from '../components/ValueCell';
 import Button from '../components/Button/Button';
 import routes from '../utils/routes';
 
-import Root from './Root';
 import SavingThrows from './SavingThrows';
 
 class Summary extends React.PureComponent {
   render() {
     return (
-      <Root activeTab="summary">
-        <div className="summary-view">
-          <div className="summary--main">
-            <div className="row">
-              <ValueCell label="Max HP" value={this.props.hp} size="large" />
-            </div>
-            <div className="row">
-              <ValueCell label="AC" value={this.props.ac} />
-              {this.props.spellSave && <ValueCell label="Spell DC" value={this.props.spellSave} />}
-            </div>
-            <div className="row">
-              <ValueCell label="Passive Perception" value={this.props.passivePerception} />
-              <ValueCell label="Initiative" value={this.props.initiative} />
-            </div>
-            <div className="row">
-              <ValueCell label="Hit Die" value={this.props.availableHitDice} />
+      <div className="summary-view">
+        <div className="summary--main">
+          <div className="row">
+            <ValueCell label="Max HP" value={this.props.hp} size="large" />
+          </div>
+          <div className="row">
+            <ValueCell label="AC" value={this.props.ac} />
+            {this.props.spellSave && <ValueCell label="Spell DC" value={this.props.spellSave} />}
+          </div>
+          <div className="row">
+            <ValueCell label="Passive Perception" value={this.props.passivePerception} />
+            <ValueCell label="Initiative" value={this.props.initiative} />
+          </div>
+          <div className="row">
+            <ValueCell label="Hit Die" value={this.props.availableHitDice} />
+            <div className="button-row">
               <Button onClick={routes.navigateToShortRest}>Short Rest</Button>
               <Button onClick={routes.navigateToLongRest}>Long Rest</Button>
             </div>
           </div>
-          <SavingThrows {...this.props.savingThrows} />
         </div>
-      </Root>
+        <SavingThrows {...this.props.savingThrows} />
+      </div>
     );
   }
 }
