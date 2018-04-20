@@ -104,14 +104,14 @@ class Item(models.Model):
     TYPE_WEAPON = 1
     TYPE_ARMOR = 2
     TYPE_CLOTHING = 3
-    TYPE_RING = 4
+    TYPE_INTERACTIVE = 4
 
     TYPE_CHOICES = (
-        (TYPE_GENERIC, 'Item'),
+        (TYPE_GENERIC, 'Generic'),
         (TYPE_WEAPON, 'Weapon'),
         (TYPE_ARMOR, 'Armor'),
         (TYPE_CLOTHING, 'Clothing'),
-        (TYPE_RING, 'Ring'),
+        (TYPE_INTERACTIVE, 'Interactive'),
     )
 
     type = models.IntegerField(choices=TYPE_CHOICES, default=TYPE_GENERIC)

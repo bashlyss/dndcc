@@ -20,11 +20,15 @@ const routeComponents = {
   summary: () => import(
     /* webpackChunkName: "summary" */
     /* webpackMode: "lazy" */
-    '../dataComponents/SummaryData.jsx'),
+    '../dataComponents/SummaryData'),
   combat: () => import(
     /* webpackChunkName: "combat" */
     /* webpackMode: "lazy" */
     '../dataComponents/CombatData'),
+  inventory: () => import(
+    /* webpackChunkName: "inventory" */
+    /* webpackMode: "lazy" */
+    '../dataComponents/InventoryData'),
 };
 
 function navigate(route, ...args) {

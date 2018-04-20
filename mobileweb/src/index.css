@@ -12,28 +12,64 @@
 div {
   display: flex;
 }
-body { margin: 0; }
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
 :focus { outline: none; }
 .main {
   flex-direction: column;
   height: 100vh;
   width: 100%;
 }
+.main__body {
+  overflow: auto;
+  width: 100%;
+}
+.main__body > * {
+  flex-grow: 1;
+  min-height: min-content;
+}
 .main > :not(:last-child) {
   flex-grow: 1;
+  overflow: auto;
 }
 
 /* Styleguide styles */
+/* Typography */
+.typography--extra-small {
+  font-size: font-extra-small;
+}
+
+.typography--small {
+  font-size: font-small;
+}
+
+.typography--medium {
+  font-size: font-medium;
+}
+
 /* List / Layout */
 .list {
   justify-content: space-evenly;
 }
+.list__header {
+  padding: 16px;
+}
+.list__item:nth-child(even) {
+  background: darkenBackground;
+}
+.list__item {
+  padding: 8px;
+}
+
 .list--vertical {
   flex-direction: column;
 }
 .row, .list--horizontal {
   flex-direction: row;
 }
+
 .row {
   margin: 8px 0;
 }
@@ -92,6 +128,9 @@ body { margin: 0; }
 /* Component styles */
 
 /* Main Menu styles */
+.main > .list {
+  flex-shrink: 0;
+}
 .main > .list .icon-button {
   border-radius: 0;
   flex-grow: 1;
@@ -109,4 +148,16 @@ body { margin: 0; }
 
 .summary-view > .list {
   padding: 8px;
+}
+
+/* Inventory page styles */
+.list-view {
+  flex-direction: column;
+}
+.list-title {
+  align-self: center;
+}
+.list-view > .list {
+  justify-content: flex-start;
+  width: 100%;
 }

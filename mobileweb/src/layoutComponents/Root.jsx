@@ -12,7 +12,9 @@ class Root extends React.PureComponent {
     return (
       <ApolloProvider client={client}>
         <div className="main">
-          <Router key="router" />
+          <div className="main__body">
+            <Router key="router" />
+          </div>
           <Menu />
         </div>
       </ApolloProvider>
