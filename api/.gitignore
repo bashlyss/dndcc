@@ -1,4 +1,9 @@
 dndcc/
+bin/
+lib/
+include/
+pyvenv.cfg
+.Python
 *.pyc
 .idea
 db.sqlite3
