@@ -37,6 +37,10 @@ const routeComponents = {
     /* webpackChunkName: "playerDetails" */
     /* webpackMode: "lazy" */
     '../dataComponents/PlayerDetailsData'),
+  settings: () => import(
+    /* webpackChunkName: "settings" */
+    /* webpackMode: "lazy" */
+    '../layoutComponents/SettingsView'),
 };
 
 function navigate(route, ...args) {
