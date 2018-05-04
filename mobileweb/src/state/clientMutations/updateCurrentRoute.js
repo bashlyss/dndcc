@@ -3,7 +3,7 @@ import gql from 'graphql-tag';
 export default (_, { newRoute, args }, { cache }) => {
   const data = {
     currentRoute: newRoute,
-    routeArgs: [],
+    routeArgs: args,
   };
   cache.writeData({ data });
   return null;

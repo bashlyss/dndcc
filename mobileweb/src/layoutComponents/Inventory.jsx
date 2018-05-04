@@ -33,7 +33,6 @@ class Inventory extends React.PureComponent {
               ))}
             </React.Fragment>
           ))}
-        
         </List>
       </div>
     )

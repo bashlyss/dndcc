@@ -29,6 +29,10 @@ const routeComponents = {
     /* webpackChunkName: "inventory" */
     /* webpackMode: "lazy" */
     '../dataComponents/InventoryData'),
+  abilities: () => import(
+    /* webpackChunkName: "abilities" */
+    /* webpackMode: "lazy" */
+    '../dataComponents/AbilityData'),
 };
 
 function navigate(route, ...args) {

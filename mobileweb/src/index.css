@@ -161,3 +161,8 @@ body {
   justify-content: flex-start;
   width: 100%;
 }
+
+/* Ability page styles */
+.ability-name {
+  flex: 1;
+}
