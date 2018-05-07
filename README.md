@@ -1,4 +1,6 @@
 # dndcc
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/jamesloewen/dndcc.svg)](https://greenkeeper.io/)
 D&amp;D 5th Edition Character Manager
 
 In my experience playing 5th edition dungeons and dragons, I have come across a few pain points with all of the character sheets I have come across that I aim to resolve with this.
