@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "mobileweb/package.json"
+      ]
+    }
+  }
+}
